@@ -1,0 +1,118 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+.container {
+    width: 50%;
+    text-align: center;
+    padding: 15px;
+}
+
+.container .title {
+    margin: 0 0 35px;
+    padding: 0 0 8px;
+    position: relative;
+}
+
+.container .title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: blueviolet;
+}
+
+.container .content {
+    padding: 10px;
+    box-shadow: 0px 2px 5px #444;
+}
+
+.content .box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: inherit;
+}
+
+.content .box .img {
+    width: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border-right: 8px solid blueviolet;
+    border-radius: 50%;
+}
+
+.content .box .user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content .box .user span:last-of-type {
+    color: blueviolet
+}
+
+.box .desc {
+    font-size: 14px;
+    color: #777;
+}
+
+.box .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.box .icons .previous,
+.box .icons .next {
+    transition: .3s;
+}
+
+.box .icons .previous:hover {
+    color: blueviolet;
+    transform: scale(1.2);
+}
+
+.box .icons .next:hover {
+    color: blueviolet;
+    transform: scale(1.2);
+}
+
+.box button {
+    padding: 5px 8px;
+    background-color: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 8px;
+    color: blueviolet;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.box button:hover {
+    background-color: #ff8686;
+    color: #fff;
+}
